@@ -1,8 +1,11 @@
+// Write a C++ program to reverse a given string.
+
 #include <iostream>
+#include <bits/stdc++.h>
 #include <string>
 using namespace std;
 
-string reverse(string word)
+string reverse_word(string word)
 {
 
     string copy_word = word;
@@ -23,8 +26,13 @@ int main()
 
     string word;
     getline(cin, word);
-    word = reverse(word);
-    cout << word;
+    string wordCopy = word;
+
+    // word = reverse_word(word);
+    reverse(wordCopy.begin(), wordCopy.end());
+
+    cout << "Original word is = " << word << endl;
+    cout << "Reversed Word is = " << wordCopy << endl;
 
     return 0;
 }
